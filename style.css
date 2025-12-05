@@ -1,0 +1,130 @@
+/* Sidebar Menu */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-box{
+    height: 100vh;
+    background-image: url("Camera.jpg");
+    background-size: cover;
+}
+
+.sidebar-menu{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    left: -300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+}
+
+.main-box input{
+    display: none;
+}
+
+.btn-one i{
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.sidebar-menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+
+.sidebar-menu .logo a{
+    color: white;
+    position: absolute;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-left: 70px;
+}
+
+.sidebar-menu .btn-two i{
+    position: absolute;
+    color: white;
+    padding-left: 85%;
+    padding-top: 1.25rem;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.btn-one i:hover{
+    font-size: 2rem;
+}
+
+.btn-two i:hover{
+    font-size: 1.5rem;
+}
+
+.sidebar-menu .menu{
+    position: absolute;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.sidebar-menu .menu ul{
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.sidebar-menu .menu ul li{
+    color: white;
+    margin: 3rem 0;
+    padding: 5px 5px;
+}
+
+.sidebar-menu .menu ul li a,
+.sidebar-menu .menu ul li i {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+}
+
+.sidebar-menu .menu ul li:hover{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    height: 30px;
+}
+
+.sidebar-menu .social-media{
+    color: white;
+    opacity: 0.5;
+    position: absolute;
+    padding-left: 2rem;
+    bottom: 20px;
+}
+
+.sidebar-menu .social-media i{
+    color: white;
+    opacity: 0.5;
+    margin-left: 0.25rem;
+}
+
+.sidebar-menu .social-media i:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#check:checked ~ .sidebar-menu{
+    left: 0;
+}
+
+#check:checked ~ .btn-one i{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar-menu .btn-two i{
+    opacity: 1;
+}
